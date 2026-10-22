@@ -1,4 +1,4 @@
-# dsh-gene
+# dsh-bioview
 
 DeepSeek Harness 插件：在右侧栏（Sidebar）文件预览里打开质粒、基因和蛋白序列文件，
 用 [SeqViz](https://github.com/Lattice-Automation/seqviz) 绘制交互式环状 / 线性图谱，
