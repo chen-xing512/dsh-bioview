@@ -1,0 +1,58 @@
+{
+  "name": "dsh-gene",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Gene, plasmid and protein sequence viewer for the DeepSeek Harness right-sidebar file preview, powered by seqparse and SeqViz.",
+  "type": "module",
+  "license": "MIT",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./lib/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src/",
+    "lib/",
+    "scripts/",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "NOTICE",
+    "LICENSE",
+    "docs/",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar-documentpreview",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    },
+    "engines": {
+      "dsh": ">=0.1.7-rc.2 <0.3.0"
+    }
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node --check src/index.js && node --check lib/client.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  },
+  "dependencies": {
+    "@lattice-automation/react-resize-detector": "^12.3.0",
+    "buffer": "^6.0.3",
+    "seqparse": "0.2.2",
+    "seqviz": "3.10.25",
+    "webfontloader": "^1.6.28"
+  }
+}

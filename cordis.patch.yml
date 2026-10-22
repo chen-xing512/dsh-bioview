@@ -1,0 +1,8 @@
+# Bundle patch for dsh-gene.
+#
+# The `insert` row mounts the host half (src/index.js). The browser half is
+# served separately through `dsh.client` in package.json and registers the
+# SeqViz document renderer into the right Sidebar's file preview.
+- insert:
+    - id: dsh-gene
+      name: dsh-gene

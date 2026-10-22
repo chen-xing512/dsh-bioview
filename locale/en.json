@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Gene Sequence Viewer",
+    "description": "Opens plasmid, gene and protein sequence files (.dna, .gb, .fa, .sbol …) in the right Sidebar preview and draws circular and linear maps with SeqViz."
+  }
+}
