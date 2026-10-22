@@ -108,9 +108,12 @@ and drawn with the interactive [SeqViz](https://github.com/Lattice-Automation/se
 浏览器半边（`lib/client.js`）是预构建产物，修改 `src/client.jsx` 后需要重新构建：
 
 ```bash
-npm install
+npm install            # 只在需要构建时执行，约 42 MB
 npm run build          # esbuild → lib/client.js
 ```
+
+> `node_modules/` 只是构建依赖，**不参与插件运行**，也不进仓库（`.gitignore` 已排除）。
+> 本目录交付时已删掉它，仓库实际体积约 800 KB；下次改代码前跑一次 `npm install` 即可恢复。
 
 构建脚本有两条刻意保留的约束：
 
